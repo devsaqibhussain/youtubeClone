@@ -14,14 +14,15 @@ const VideoDetail = () => {
     fetchFromAPI(`videos?part=snippet&id=${id}`)
     .then((data)=>{
       setVideoDetail(data.items[0])})
+    window.scrollTo(0,0)
   },[id])
-  console.log(videoDetail)
+
   return (
     <section className='p-2 sm:p-4'>
       <div className=' grid grid-cols-1 lg:grid-cols-6 gap-4'>
 
         <div className=' col-span-1 lg:col-span-4 lg:pt-4 overflow-y-auto'>
-          <div className='player-wrapper'>
+          <div className={`w-full h-[56vh]`}>
             <ReactPlayer 
               url={`https://www.youtube.com/watch?v=${id}`} 
               controls={true}
@@ -45,10 +46,7 @@ const VideoDetail = () => {
               <h4>Description:</h4>
               <p className=' text-[11px] sm:text-[16px]'>{videoDetail?.snippet?.description}</p>
             </div>
-          
-          
         </div>
-
         <div className='col-span-1 lg:col-span-2'>
           <h4 className='text-lg font-bold text-white p-4'>Suggested Videos</h4>
           <div className='h-screen overflow-y-scroll'>
