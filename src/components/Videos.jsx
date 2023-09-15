@@ -5,7 +5,7 @@ const Videos = ({videos, grid}) => {
       // <div className=' flex flex-wrap gap-4 lg:justify-start justify-center'>
       <div className={`${grid? "grid grid-cols-1":"grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4" } `}>
           {videos.map((item,index)=>{
-            return(
+            return !item.id.playlistId &&(
               <div key={index}>
                   {item.id.videoId && <VideoCard video={item}/>}
                   {item.id.channelId && <ChannelCard channelDetail={item}/>}

@@ -6,7 +6,7 @@ import { demoThumbnailUrl ,demoVideoUrl , demoChannelUrl ,demoChannelTitle , dem
 const VideoCard = ({video:{id:{videoId},snippet}}) => {
   return (
     <div
-        className=' w-full  flex flex-col justify-start flex-wrap'
+        className=' w-full  flex flex-col justify-start '
     >
         <Link to={videoId?`/video/${videoId}`:demoVideoUrl}>
             <img 
