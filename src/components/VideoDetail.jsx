@@ -22,7 +22,7 @@ const VideoDetail = () => {
       <div className=' grid grid-cols-1 lg:grid-cols-6 gap-4'>
 
         <div className=' col-span-1 lg:col-span-4 lg:pt-4 overflow-y-auto'>
-          <div className={`w-full h-[56vh]`}>
+          <div className={`w-full aspect-video`}>
             <ReactPlayer 
               url={`https://www.youtube.com/watch?v=${id}`} 
               controls={true}
