@@ -7,7 +7,7 @@ const NavBar = () => (
     <div
       className='fixed z-[5] top-0 flex w-full py-2 px-2 2xl:px-4 bg-[#0f0f0f]'
     >
-      <Link to={"/"} className=' flex items-center justify-center'>
+      <Link to={"/youtubeClone/"} className=' flex items-center justify-center'>
         <img src={ytLogo} alt='logo' className=' flex-shrink-0 h-[50px] object-contain'/>
       </Link>
 
